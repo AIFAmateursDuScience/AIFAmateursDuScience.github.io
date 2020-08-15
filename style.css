@@ -1,17 +1,42 @@
 
 body{
 font-family: 'Titillium Web', sans-serif;
+background-color: white;
 }
 h1{font-size: 66px; font-weight: 600; line-height: 80px; color: white;}
-h2{font-size: 48px; margin-bottom: 40px;}
+h2{font-size: 48px; margin-bottom: 40px; ;}
+h3{text-align:left;}
+h4{font-size:40px; text-align:left;}
+
 h6{font-size: 35px; margin-bottom: 40px;}
 p{
     font-size: 18px;
-    color: gray;
     line-height: 1.8;
     margin-bottom: 0;
     text-align: justify;
 }
+.marcotexto{
+    border: solid black 2px;
+    border-radius: 16px;
+}
+/*
+.card-columns {
+    @include media-breakpoint-only(lg) {
+      column-count: 4;
+    }
+    @include media-breakpoint-only(xl) {
+      column-count: 5;
+    }
+  }
+  
+.izquierda
+{
+    align-items: left;
+}
+.derecha{
+align-items: right;
+}
+*/
 
 section {
     padding: 140px 0;
@@ -19,7 +44,14 @@ section {
 .topmargin-xs{margin-top: 15px}
 .topmargin-sm{margin-top: 30px}
 .topmargin-lg{margin-top: 60px}
+.bordeimagen{
+    border: solid black 5px;
+    border-radius: 10px;
+}
 
+#informacion p {
+    color:black;
+}
 .btn{
     font-size: 14px;
     padding: 15px 26px;
@@ -87,17 +119,118 @@ section {
     overflow: hidden;
     margin: 10px 100px; 
     border-radius: 2px;
+    transition: all 1s ;
+    text-shadow: cadetblue;
+    
 }
+.informacion-details p{
+    visibility: hidden;
+    color: white;
+   
+}
+
+.informacion-details h2{
+    visibility: hidden;
+   
+}
+
+   
+/*ANIMACIÓN DE LA IMAGEN*/
+.informacion-container:hover{  
+  transform: scale(1.2, 1.2); 
+  visibility: visible;
+  filter:drop-shadow(8px 8px 10px gray);
+  filter: grayscale(3000%);
+  border: solid 4px rgb(0, 0, 0);
+  border-radius: 10px;
+  
+}
+/*HACER QUE APAREZCA EL TEXTO*/
+.informacion-container:hover p{  
+     visibility: visible;
+     color: white;
+    
+   }
+   .informacion-container:hover h2{  
+    visibility: visible;
+   
+   
+  }
+ 
+
 .informacion-details {
     position: absolute;
     bottom: 25px;
-    
+    left: 25px;
     z-index: 9000;
+    color: whitesmoke;
+   
 }
-@media (max-width: 575.98px) { 
-    h1 {font-size: 40px; line-height: normal;}
+.informacion-details h2 {
+    margin-bottom: 0px;
 }
 
+
+	table { 
+        margin-left: auto;
+		width: 100%; 
+		border-collapse: collapse; 
+	}
+	/* Zebra striping */
+	tr:nth-of-type(odd) { 
+		background: #eee; 
+	}
+	th { 
+		background: #333; 
+		color: white; 
+		font-weight: bold; 
+	}
+	td, th { 
+		padding: 6px; 
+		border: 1px solid #ccc; 
+		text-align: left; 
+	}
+ 
+
+
+#informacion p{
+font-size: 22px;
+text-align: justify;
+text-decoration-style: solid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Bibliografia{
+    margin-left: 120px;
+    margin-right: 120px;
+    padding: 40px;
+    border: solid black;
+    border-radius: 5px;
+}
+#contacto{
+    border: solid black;
+    border-radius: 6px;
+    background-color: chocolate;
+}
+
+
+
+@media (max-width: 575.98px) { 
+    h1 {font-size: 40px; line-height: normal;
+}
+}
 /*
 @media (max-width: 767px) { ... }
 
